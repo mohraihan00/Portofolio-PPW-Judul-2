@@ -1,41 +1,60 @@
-# Portofolio (Styled Tugas Akhir)
+# Portofolio (Tugas Akhir Pemrograman Web)
 
-Repositori ini berisi website portofolio pribadi berbasis **HTML dan CSS** yang digunakan sebagai pemenuhan **Tugas Akhir** pada mata kuliah *Pemrograman Web*.  
-Website menampilkan informasi diri, riwayat pendidikan, organisasi, keahlian, proyek, dan form kontak.  
-Desain telah mengalami perubahan styling sesuai instruksi tugas akhir menggunakan tema terang, aksen warna baru, radius komponen, dan bayangan elemen.
+Proyek ini adalah website portofolio sederhana yang dibuat menggunakan **HTML dan CSS tanpa framework**.  
+Isi utamanya menampilkan data diri, pendidikan, pengalaman organisasi, keahlian, serta beberapa contoh proyek.  
+Ada juga form kontak sebagai simulasi pengiriman pesan.
 
----
-
-## ✅ Fitur Website
-
-- Dibangun menggunakan **HTML dan CSS murni**, tanpa framework.
-- Struktur semantik web:
-  - `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`
-- Komponen tampilan:
-  - Bagian profil, pendidikan, organisasi, keahlian, proyek
-  - Tabel, card, list, link eksternal
-  - Form kontak dengan validasi HTML5 (`required`, `type`, `select`, `textarea`)
-- Responsif dengan media query sehingga tetap rapi di device kecil.
-- Aksesibilitas dasar:
-  - Skip link
-  - ARIA label pada navigasi dan kontak
-- Print-friendly (ketika di-print menjadi format CV yang bersih)
+Sebagai bagian dari **Tugas Akhir**, tampilan website diperbarui menggunakan tema terang, penyesuaian warna, sudut komponen dibuat lebih halus, dan diberi efek bayangan agar elemen terlihat lebih rapi.
 
 ---
 
-## ✅ Perubahan Styling (Sesuai Tugas Akhir)
+## Fitur
 
-Website mengalami perubahan desain dibanding versi sebelumnya:
+- Tampilan dibuat dengan HTML dan CSS murni  
+- Struktur halaman memakai elemen semantik  
+- Layout responsif, tetap nyaman dilihat di ukuran layar kecil  
+- Form kontak dengan validasi HTML bawaan  
+- Cocok untuk di-print sebagai CV satu halaman
+- Navigasi sederhana, ringan, dan cepat diakses
 
-| Elemen | Perubahan |
+---
+
+## Perubahan Styling
+
+| Bagian | Perubahan |
 |--------|-----------|
-| Tema warna | Menggunakan tema terang (light) dengan aksen biru `--brand` dan ungu `--brand-2` |
-| Border & Radius | Komponen memakai border lembut dan `--radius: 18px` |
-| Shadow | Menggunakan `--shadow: 0 10px 32px rgba(27,35,58,.08)` pada panel dan card |
-| Background | Latar belakang menggunakan 2 radial gradient untuk fokus visual |
-| Indikator tugas | Terdapat watermark kecil **“TUGAS AKHIR THEME”** pada pojok layar sebagai bukti perubahan styling |
+| Tema Warna | Beralih ke tema terang dengan aksen biru dan ungu |
+| Border & Radius | Elemen memiliki sudut lebih lembut (border-radius 18px) |
+| Shadow | Panel dan card mendapat efek bayangan halus |
+| Background | Menggunakan radial gradient agar tidak polos |
+| Penanda TA | Menambahkan watermark kecil sebagai penanda tugas akhir |
 
+---
 
-![Tampilan Website Sebelum diupdate](images/tampilan_web1.png)
-![Tampilan Website Setelah diupdate](images/tampilan_web2.png)
-![Output Terminal Pada git log --graph --oneline](images/tampilan_web3.png)
+## Dokumentasi
+
+Tampilan sebelum dan sesudah perubahan:
+
+![Sebelum](images/tampilan_web1.png)  
+![Sesudah](images/tampilan_web2.png)
+
+Contoh hasil `git log --graph --oneline`:
+
+![Riwayat Git](images/terminal.png)
+
+---
+
+## Cara Menjalankan
+
+1. Clone atau download repository ini  
+2. Buka file `index.html` menggunakan browser  
+3. Tidak memerlukan server tambahan atau instalasi library
+
+---
+
+## Catatan
+
+Repository ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Web, sekaligus latihan membuat website portofolio sederhana menggunakan HTML dan CSS murni.
+
+Jika ingin menambah fitur atau memperbaiki tampilan, cukup ubah `index.html` dan `styles.css`.
+
