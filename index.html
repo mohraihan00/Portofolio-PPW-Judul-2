@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio (Styled Tugas Akhir)</title>
+  <meta name="description" content="Portofolio Muhammad Raihan Jamil — Web development, UI, dan proyek kampus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><span class="logo__badge" aria-hidden="true">RJ</span> Muhammad Raihan Jamil</h1>
+      <nav class="nav" aria-label="Navigasi utama">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="nav__list">
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#pendidikan">Pendidikan</a></li>
+          <li><a href="#pengalaman">Organisasi</a></li>
+          <li><a href="#skills">Keahlian</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="hero" aria-labelledby="tagline">
+      <div class="container grid-2">
+        <div>
+          <h2 id="tagline">Mahasiswa TI dengan fokus Frontend</h2>
+          <p>Berfokus pada perancangan antarmuka web yang interaktif, responsif, dan ramah pengguna. Ingin berkontribusi menciptakan pengalaman pengguna yang optimal dengan teknologi web modern.</p>
+          <div class="cta">
+            <a class="btn" href="#proyek">Lihat Proyek</a>
+            <a class="btn btn--ghost" href="#kontak">Hire Me</a>
+          </div>
+          <ul class="contact-inline" aria-label="Kontak langsung">
+            <li><a href="tel:+6289655339458">+62 896-5533-9458</a></li>
+            <li><a href="mailto:raihan.jamil00@gmail.com">raihan.jamil00@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-raihan-jamil/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/mohraihan00" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+        <figure class="portrait">
+          <img src="images/foto.jpg" alt="Muhammad Raihan Jamil">
+          <figcaption>Bandar Lampung, Indonesia</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="tentang" class="section">
+      <div class="container">
+        <h3>Tentang</h3>
+        <article>
+          <p>Saya mahasiswa Teknik Informatika Universitas Lampung yang tertarik di web development, khususnya frontend. Tak hanya web, saya juga memiliki ketertarikan dalam Game Development</p>
+          <aside class="note" aria-label="Catatan kecil">Fun fact: saya juga senang bermain dengan desain di Figma, lalu mengubahnya jadi komponen CSS yang reusable.</aside>
+        </article>
+      </div>
+    </section>
+
+    <section id="pendidikan" class="section">
+      <div class="container">
+        <h3>Pendidikan</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Lembaga</th>
+              <th>Lokasi</th>
+              <th>Periode</th>
+              <th>Catatan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SMP Islam Al‑Muttaqin</td>
+              <td>Tulang Bawang</td>
+              <td>Jun 2017 – Apr 2020</td>
+              <td>Pelajaran umum dan agama</td>
+            </tr>
+            <tr>
+              <td>SMAN 02 Dente Teladas</td>
+              <td>Tulang Bawang</td>
+              <td>Jul 2020 – May 2023</td>
+              <td>Jurusan IPA</td>
+            </tr>
+            <tr>
+              <td>Universitas Lampung</td>
+              <td>Bandar Lampung</td>
+              <td>Aug 2023 – Jul 2027 (Expected)</td>
+              <td>Mahasiswa Teknik Informatika</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pengalaman" class="section">
+      <div class="container">
+        <h3>Organisasi</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>HIMATRO — Universitas Lampung</h4>
+            <p class="muted">Oct 2023 – Nov 2024</p>
+            <ul>
+              <li>Humas: strategi komunikasi dan publikasi.</li>
+              <li>Konsumsi: perencanaan dan distribusi logistik acara.</li>
+              <li>Fundrise: sponsor, merchandise, dan target dana.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>UKM U Gradien Unila</h4>
+            <p class="muted">Aug 2024 – Sekarang</p>
+            <ul>
+              <li>Divisi Project: pengembangan proyek tim end‑to‑end.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h3>Keahlian</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Hard Skills</h4>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>C++</li><li>C#</li><li>Python</li><li>MySQL</li><li>Figma</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Soft Skills</h4>
+            <ul class="tags">
+              <li>Problem Solving</li><li>Kerja Tim</li><li>Manajemen Waktu</li><li>Komunikasi</li><li>Adaptasi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <div class="container">
+        <h3>Kontak</h3>
+        <p>Isi formulir berikut. Hanya validasi sisi-klien dasar untuk demo konsep HTML form.</p>
+        <form class="form" action="#" method="post">
+          <fieldset>
+            <legend>Form Kontak</legend>
+            <div class="form__row">
+              <label for="nama">Nama</label>
+              <input id="nama" name="nama" type="text" placeholder="Nama lengkap" required>
+            </div>
+            <div class="form__row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="nama@contoh.com" required>
+            </div>
+            <div class="form__row">
+              <label for="topik">Topik</label>
+              <select id="topik" name="topik" required>
+                <option value="">Pilih satu...</option>
+                <option>Kerja Sama</option>
+                <option>Project Freelance</option>
+                <option>Magang</option>
+              </select>
+            </div>
+            <div class="form__row">
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesannya..." required></textarea>
+            </div>
+            <div class="form__row form__row--check">
+              <input id="setuju" name="setuju" type="checkbox" required>
+              <label for="setuju">Saya setuju data saya diproses untuk keperluan respons.</label>
+            </div>
+            <button class="btn" type="submit">Kirim</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>&copy; <span id="year"></span> Muhammad Raihan Jamil. Dibuat dengan HTML & CSS murni.</small>
+      <ul class="social">
+        <li><a href="mailto:raihan.jamil00@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/muhammad-raihan-jamil/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/mohraihan00" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // JS vanilla kecil untuk toggle nav mobile + tahun
+    const btn = document.querySelector('.nav__toggle');
+    const menu = document.getElementById('menu');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('is-open');
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

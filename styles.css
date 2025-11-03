@@ -1,0 +1,150 @@
+/* CSS dasar yang menampilkan berbagai konsep: reset, variable, layout, grid, flex, typography, form, table, media query */
+:root{
+  --bg:#f7f8fc;
+  --panel:#ffffff;
+  --text:#1c2233;
+  --muted:#6a728a;
+  --brand:#5a66ff;
+  --brand-2:#a56bff;
+  --outline:#e6e9f3;
+  --radius:18px;
+  --shadow:0 10px 32px rgba(27,35,58,.08);
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(108,127,255,.15), transparent),
+              radial-gradient(1000px 500px at 110% 10%, rgba(155,108,255,.15), transparent),
+              var(--bg);
+  line-height:1.6;
+}
+
+a{color:var(--brand); text-decoration: none}
+a:hover{text-decoration: underline}
+img{max-width:100%; display:block}
+
+.skip-link{
+  position:absolute; left:-9999px; top:auto;
+}
+.skip-link:focus{left:1rem; top:1rem; background:#000; color:#fff; padding:.5rem 1rem; border-radius:8px}
+
+.container{width:min(1100px, 92%); margin-inline:auto}
+
+.site-header{
+  position:sticky; top:0; z-index:10; backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--outline);
+  background: color-mix(in srgb, var(--bg), transparent 35%);
+}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:1rem 0}
+.logo{font-size:1.15rem; display:flex; align-items:center; gap:.6rem; margin:0}
+.logo__badge{display:inline-grid; place-items:center; width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:white; font-weight:700; box-shadow:var(--shadow)}
+
+.nav__toggle{display:none}
+.nav__list{display:flex; gap:1rem; list-style:none; padding:0; margin:0}
+.nav__list a{display:inline-block; padding:.5rem .75rem; border-radius:10px}
+.nav__list a:hover{background:color-mix(in srgb, var(--brand) 20%, transparent)}
+
+.hero{
+  padding:3rem 0 2rem;
+}
+.grid-2{
+  display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center;
+}
+.portrait{
+  background:var(--panel); backdrop-filter:saturate(1.1)
+  border:1px solid var(--outline)
+  border-radius:var(--radius);
+  padding:1rem;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+.cta{display:flex; gap:1rem; margin:1rem 0 0}
+.btn{
+  display:inline-block; background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:white; padding:.7rem 1rem; border-radius:12px; box-shadow:var(--shadow);
+  border:0; cursor:pointer; font-weight:600;
+}
+.btn--ghost{background:transparent; border:1px solid var(--outline) color:var(--text)}
+.btn--small{padding:.5rem .75rem; font-size:.9rem}
+
+.section{padding:2rem 0}
+h2,h3,h4{line-height:1.2}
+.muted{color:var(--muted)}
+
+.cards{
+  display:grid; grid-template-columns: 1fr; gap:1rem;
+}
+.cards--3{grid-template-columns: repeat(3, 1fr)}
+.card{
+  background:var(--panel); backdrop-filter:saturate(1.1)
+  border:1px solid var(--outline)
+  padding:1rem; border-radius:var(--radius); box-shadow:var(--shadow);
+}
+.note{
+  margin-top:1rem; padding:1rem; border-left:4px solid var(--brand);
+  background:color-mix(in srgb, var(--brand) 8%, var(--panel));
+  border-radius:12px;
+}
+
+.table{
+  width:100%; border-collapse: collapse; overflow:hidden; border-radius:12px;
+  box-shadow:var(--shadow); border:1px solid var(--outline)
+}
+.table th, .table td{padding:.8rem 1rem; border-bottom:1px solid var(--outline)}
+.table thead th{background:color-mix(in srgb, var(--brand) 12%, var(--panel)); text-align:left}
+
+.tags{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:.5rem}
+.tags li{padding:.4rem .6rem; border:1px solid var(--outline) border-radius:999px; background:color-mix(in srgb, var(--panel), transparent 20%)}
+
+.form fieldset{border:1px solid var(--outline) padding:1rem; border-radius:12px; background:var(--panel)}
+.form__row{display:flex; flex-direction:column; gap:.4rem; margin:.8rem 0}
+.form__row--check{flex-direction:row; align-items:center; gap:.6rem}
+input,select,textarea{
+  background: #0e0e16; color:var(--text); border:1px solid var(--outline) border-radius:10px;
+  padding:.65rem .8rem; font:inherit; outline: none;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--brand); box-shadow:0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent)}
+
+.site-footer{
+  border-top:1px solid var(--outline); padding:1.2rem 0; margin-top:2rem;
+}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.social{display:flex; gap:1rem; list-style:none; padding:0; margin:0}
+
+.contact-inline{display:flex; gap:1rem; list-style:none; padding:0; margin:1rem 0 0; flex-wrap:wrap}
+.contact-inline a{background:color-mix(in srgb, var(--brand) 10%, transparent); padding:.25rem .6rem; border-radius:8px}
+
+/* Responsive */
+@media (max-width: 860px){
+  .grid-2{grid-template-columns: 1fr}
+  .cards--3{grid-template-columns: 1fr}
+  .nav__toggle{display:inline-block; background:transparent; border:1px solid var(--outline) color:var(--text); padding:.4rem .6rem; border-radius:10px}
+  .nav__list{display:none; flex-direction:column; background:var(--panel); backdrop-filter:saturate(1.1) padding:.8rem; border:1px solid var(--outline) position:absolute; right:4%; top:56px; border-radius:12px}
+  .nav__list.is-open, .nav__list.is-open ~ .nav__list{display:flex}
+}
+
+/* Demo beberapa selector & pseudo */
+.hero p strong{font-weight:700}
+.hero p em{font-style:italic}
+.card:hover{transform: translateY(-2px); transition: transform .2s ease}
+
+/* Positioning */
+.portrait{position:relative}
+.portrait figcaption{position:absolute; inset:auto 0 .6rem 0; text-align:center; font-size:.9rem; color:var(--muted)}
+
+/* Utility */
+.grid{display:grid; gap:1rem}
+.grid-3{grid-template-columns: repeat(3, 1fr)}
+
+
+/* -- tugas-akhir: perubahan styling (theme terang + aksen baru + radius + shadow) -- */
+body::before{
+  content:"TUGAS AKHIR THEME"; position: fixed; right: 12px; bottom: 12px;
+  font: 600 11px/1 Inter, system-ui, sans-serif; letter-spacing: .5px;
+  color:#4b4b5e; background:#eef0ff; border:1px dashed #cfd3ff; padding:.35rem .5rem; border-radius:999px; z-index:9999; opacity:.7;
+}
